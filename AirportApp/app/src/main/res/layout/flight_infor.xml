@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/airport_image_layout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/airport_image"
+            android:id="@+id/airport_image"
+            />
+
+        <ImageView
+            android:id="@+id/back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/airport_image"
+            android:layout_marginTop="@dimen/back_margin"
+            android:layout_alignTop="@+id/airport_image"
+            android:layout_marginLeft="@dimen/back_margin"
+            android:gravity="left"
+            app:srcCompat="@drawable/ic_black_arrow"
+            android:tint = "@color/white"/>
+
+        <TextView
+            android:id="@+id/lbl_airport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/airport_image"
+            android:layout_marginBottom="@dimen/airport_name_left_margin"
+            android:layout_alignRight="@+id/airport_image"
+            android:layout_alignBottom="@+id/airport_image"
+            android:layout_marginLeft="@dimen/airport_name_left_margin"
+            android:gravity="left"
+            android:text="Airport Name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/airport_name"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/airport_image_layout"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/line_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_below="@+id/airport_image_layout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/loading_line"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/loading_line"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/loading_line"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/loading_line"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/loading_line"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/loading_line"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/loading_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@+id/airport_image_layout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/no_results"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

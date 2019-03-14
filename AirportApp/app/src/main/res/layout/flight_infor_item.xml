@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
+
+
+    <ImageView
+        android:id="@+id/plane_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/ic_plane" />
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/airline_name"
+        android:layout_alignBottom="@+id/airline_name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="sans-serif-dark"
+        android:text="Status"
+        android:textSize="@dimen/heading_size"/>
+
+    <TextView
+        android:id="@+id/airline_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/plane_image"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/plane_image"
+        android:text="Airline Name"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/status_image"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_alignBottom="@+id/status_text"
+        android:layout_alignTop="@+id/plane_image"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/status_text"
+        app:srcCompat="@drawable/departed" />
+
+    <TextView
+        android:id="@+id/lbl_depart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/plane_image"
+        android:layout_below="@+id/plane_image"
+        android:layout_marginTop="15dp"
+        android:text="Departure Time"
+        android:textSize="@dimen/heading_size"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lbl_depart"
+        android:layout_alignBottom="@+id/lbl_depart"
+        android:layout_centerHorizontal="true"
+        android:text="Flight Number"
+        android:textSize="@dimen/heading_size"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_destination"
+        android:layout_alignStart="@+id/status_image"
+        android:layout_alignTop="@+id/textView4"
+        android:text="Destination"
+        android:textSize="@dimen/heading_size"/>
+
+    <TextView
+        android:id="@+id/departure_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lbl_depart"
+        android:layout_below="@+id/lbl_depart"
+        android:text="TextView"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/txt_flight_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:text="TextView"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txt_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_flight_number"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:text="Destination"
+        android:textStyle="bold"/>
+</RelativeLayout>

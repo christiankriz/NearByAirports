@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AirportApp</string>
+    <string name="title_activity_maps">AirportApp</string>
+    <string name="title_activity_flight_details">FlightDetails</string>
+</resources>
